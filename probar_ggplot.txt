@@ -1,0 +1,19 @@
+variable <- table(mtcars$gear)
+> barplot(variable)
+
+?barplot(variable, main= "Grafico simple de barras", xlab = "Variable x", ylab ="Variable Y", legend = rownames(variable), col = c("red","yellow","green"))
+
+variable <- table (mtcars$vs, mtcars$gear)
+barplot (variable, col = c("red", "yellow"), legend = rownames (variable), beside = TRUE)
+
+PASTEL
+slices <- c(14, 14, 7, 9)
+lbls <- c("US", "UK", "Ger", "Esp")
+pie (slices, labels = lbls, main = "Grafica simple pastel")
+
+HISTOGRAMA
+hist(mtcars$mpg, breaks=8, col = "orange")
+
+GRAFICO DENSIDAD KERNEL
+datos_densidad <- density(mtcars$mpg)
+plot(datos_densidad)
